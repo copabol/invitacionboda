@@ -1,0 +1,58 @@
+<section class="max-w-6xl mx-auto sm:px-8 md:px-12 py-8 space-y-8 text-[#f22626]">
+
+  <!-- Calendario -->
+  <article class="text-center">
+    <h3 class="text-2xl mb-6 inline-block border-b-4 border-[#f22626] pb-2 greatvibes">
+      Días de Fiesta - Septiembre
+    </h3>
+
+    <div class="grid grid-cols-7 gap-2 max-w-md mx-auto text-center text-gray-600  text-sm font-medium">
+      <!-- Días de la semana -->
+      <div *ngFor="let dayName of ['Lun','Mar','Mié','Jue','Vie','Sáb','Dom']"
+           class="py-1 font-bold text-[#7f4b3e]">
+        {{ dayName }}
+      </div>
+
+      <!-- Días del mes -->
+      <ng-container *ngFor="let day of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]">
+        <div
+          [ngClass]="{
+            'bg-[#ef4141] text-gray-200  rounded-xl font-bold shadow-md': diasDestacados.includes(day),
+            'hover:bg-yellow-100 rounded-md cursor-pointer': !diasDestacados.includes(day)
+          }"
+          class="py-2"
+        >
+          {{ day }}
+        </div>
+      </ng-container>
+    </div>
+  </article>
+
+  <!-- Lugar del evento -->
+  <article class="text-center">
+    <h3 class="text-4xl greatvibes mb-2 pb-2">
+      Lugar del Evento
+    </h3>
+
+    <button
+      (click)="mostrarMapa = !mostrarMapa"
+      class="mt-4 mb-4 p-2 bg-[#ef4141]  text-gray-200 font-semibold rounded-xl shadow hover:bg-yellow-200 transition"
+    >
+      {{ mostrarMapa ? 'Ocultar ubicación' : 'Mostrar ubicación' }}
+    </button>
+
+    <div *ngIf="mostrarMapa" class="aspect-[4/3] sm:aspect-[16/9] max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-xl ">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d566.4683156461253!2d-67.916639923874!3d-17.231911356767572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9158e8cec5115953%3A0x6e6cce7a61bbb7d1!2sPatacamaya!5e0!3m2!1ses-419!2sbo!4v1754412611223!5m2!1ses-419!2sbo" 
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="w-full h-full"
+      ></iframe>
+    </div>
+  </article>
+
+</section>
+
+

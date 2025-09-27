@@ -1,0 +1,41 @@
+html {
+  scroll-behavior: smooth;
+}
+/* From Uiverse.io by faxriddin20 */
+.button-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+ 
+}
+
+.icon {
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.button {
+  outline: none !important;
+  border: none !important;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background-color: #f7edd5c0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff004b;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px transparent;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 8px 2px #f1e6b6; /* amarillo brillante */
+  color: #ff004b;
+}

@@ -1,0 +1,19 @@
+<header class="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#ff004b]/90 to-transparent backdrop-blur-sm flex justify-center">
+  <nav class="button-container">
+    <button (click)="scrollToSection('invitacion')" aria-label="Invitación" class="button" title="Invitación">
+      <fa-icon [icon]="faEnvelopeOpen" class="icon"></fa-icon>
+    </button>
+    <button (click)="scrollToSection('musica')" aria-label="Música" class="button" title="Música">
+      <fa-icon [icon]="faMusic" class="icon"></fa-icon>
+    </button>
+    <button (click)="scrollToSection('cronograma')" aria-label="Cronograma" class="button" title="Cronograma">
+      <fa-icon [icon]="faCalendarAlt" class="icon"></fa-icon>
+    </button>
+   <button (click)="scrollToSection('lugar')" aria-label="lugar" class="button" title="Ubicación">
+  <fa-icon [icon]="faMapMarkerAlt" class="icon"></fa-icon>
+</button>
+    <button (click)="scrollToSection('fotos')" aria-label="Fotos" class="button" title="Fotos">
+      <fa-icon [icon]="faCameraRetro" class="icon"></fa-icon>
+    </button>
+  </nav>
+</header>

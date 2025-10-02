@@ -77,7 +77,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy, OnInit {
   isBackgroundPlaying: boolean = false;
   isPlaying: boolean = false;
 
-  backgroundAudioUrl = '/audios/boda.ogg';
+  backgroundAudioUrl = '/audios/bodas.ogg';
   codigo: string = '';
   mostrarVideo: boolean = false;
   videoURL: string = 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=1234567890&show_text=0&autoplay=0';

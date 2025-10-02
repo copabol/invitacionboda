@@ -14,7 +14,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
   <!-- Contenido principal sobre el fondo -->
   <div class="relative text-center z-10">
     <img src="/iconos/boda.webp" alt="Semilla" class="w-18 h-10 mx-auto mb-2" />
-    <h2 class="text-5xl sm:text-6xl font-serif text-[#f7d94c] select-none greatvibes mb-4">
+    <h2 class="text-5xl sm:text-6xl font-serif text-white select-none greatvibes mb-4">
       Invitación
     </h2>
 

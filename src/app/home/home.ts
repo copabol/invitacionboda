@@ -17,6 +17,7 @@ import { PostComponent } from '../post/post';
   styleUrls: ['./home.css']
 })
 export class HomeComponent implements AfterViewInit, OnDestroy, OnInit {
+
   backgroundAudio!: HTMLAudioElement;
   confirmForm: FormGroup;
   selectedFile: File | null = null;
@@ -76,7 +77,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy, OnInit {
   isBackgroundPlaying: boolean = false;
   isPlaying: boolean = false;
 
-  backgroundAudioUrl = '/audios/amarbolivia.ogg';
+  backgroundAudioUrl = '/audios/boda.ogg';
   codigo: string = '';
   mostrarVideo: boolean = false;
   videoURL: string = 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=1234567890&show_text=0&autoplay=0';
@@ -143,22 +144,6 @@ onMessageReceived = (event: MessageEvent) => {
     }
   } catch (_) {}
 };
-
-  verificarCodigo() {
-    if (this.codigo === 'CALLAPA') {
-      this.mostrarVideo = true;
-    } else {
-      alert('Código incorrecto. Inténtalo nuevamente.');
-    }
-  }
-
-  verificarCodigoFotos() {
-    if (this.codigoFotos === 'FOTOS') {
-      this.mostrarFotos = true;
-    } else {
-      alert('Código incorrecto para fotografías.');
-    }
-  }
 
   toggleVestimenta(tipo: 'folklorico' | 'diana') {
     if (tipo === 'folklorico') {
@@ -279,4 +264,31 @@ randomHeight() {
   scrollToSection(anchor: string): void {
     this.viewportScroller.scrollToAnchor(anchor);
   }
+
+  expandirVideo: boolean = false; // si quieres el mismo efecto en video
+  expandirFotos: boolean = false; // controla si la caja de fotos se expande
+   toggleExpandVideo() {
+    this.expandirVideo = !this.expandirVideo;
+  }
+
+  toggleExpandFotos() {
+    this.expandirFotos = !this.expandirFotos;
+  }
+  // Verificar código del video
+  verificarCodigo() {
+    if (this.codigo === 'CALLAPA') {
+      this.mostrarVideo = true;
+    } else {
+      alert('Código incorrecto. Inténtalo nuevamente.');
+    }
+  }
+  // Verificar código de fotos
+  verificarCodigoFotos() {
+    if (this.codigoFotos === 'FOTOS') {
+      this.mostrarFotos = true;
+    } else {
+      alert('Código incorrecto para fotografías.');
+    }
+  }
+  
 }
